@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FileUploader from '../components/FileUploader';
+import ResultDisplay from '../components/ResultDisplay';
+---
+
+<Layout title="Whisper Transcription">
+	<main class="container mx-auto px-4 py-8">
+		<h1 class="text-4xl font-bold text-center mb-8 text-gray-800">Whisper Transcription</h1>
+		<div class="max-w-2xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+			<div class="p-6">
+				<FileUploader client:load />
+			</div>
+			<div class="border-t border-gray-200">
+				<ResultDisplay client:load />
+			</div>
+		</div>
+	</main>
+</Layout>
